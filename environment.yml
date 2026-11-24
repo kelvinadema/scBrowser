@@ -1,0 +1,13 @@
+name: scBrowser
+channels: [conda-forge]
+dependencies:
+  - python=3.11
+  - h5py>=3.10
+  - numpy>=1.26
+  - pandas>=2.1
+  - pyarrow>=14
+  - plotly>=5.20
+  - scikit-learn>=1.4   # Expression tab gene heatmap: k-means clustering
+  - pip
+  - pip:
+      - shiny>=1.0

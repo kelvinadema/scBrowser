@@ -1,0 +1,18 @@
+# Data: unpublished, 5+ GB, never in git
+viewer_data/
+
+# Runtime / caches
+__pycache__/
+*.pyc
+*.log
+.port
+
+# Check folders: keep the test scripts, not outputs, backups or rendered figures
+_checks_*/*.out
+_checks_*/*.txt
+_checks_*/*.before_*
+_checks_*/*/
+
+# Local UI validation artifacts (real unpublished data)
+checks/ui-redesign/*.png
+checks/ui-redesign/browser-results.json
