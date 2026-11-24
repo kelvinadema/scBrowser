@@ -1,4 +1,4 @@
-# Data: unpublished, 5+ GB, never in git
+# Data: 5+ GB, distributed separately, never in git
 viewer_data/
 
 # Runtime / caches
@@ -13,6 +13,6 @@ _checks_*/*.txt
 _checks_*/*.before_*
 _checks_*/*/
 
-# Local UI validation artifacts (real unpublished data)
+# Local UI validation output (screenshots, results)
 checks/ui-redesign/*.png
 checks/ui-redesign/browser-results.json
