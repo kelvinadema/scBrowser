@@ -77,6 +77,7 @@ def build_ui(c, scripts):
         ui.output_ui('gene_header'), ui.output_ui('gene_annotation'),
         ui.panel_conditional("input.sel_kind === 'set'", copy('inspection_help')),
         ui.input_action_button('use_gene', 'Plot this gene'),
+        ui.output_ui('back_to_set_ui'),
         ui.h3('Fate association'), ui.output_ui('fate_verdict'),
         button('View fate evidence', **{'data-evidence':'fate'}),
         ui.h3('Dissociation response'), ui.output_ui('dissoc_verdict'),

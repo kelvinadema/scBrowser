@@ -614,6 +614,30 @@ def server(input, output, session):
         if gene_row() is not None:
             activate_searched_gene()
 
+    # After "Plot this gene" (or a gene search) the set is still in the Gene sets box, but the
+    # "Details for: Inspected gene / Active set" switch only exists while a set is active.
+    # This button returns to that set without clearing the gene, which stays inspected.
+    @render.ui
+    def back_to_set_ui():
+        if input.sel_kind() == "set":
+            return None
+        n = len(geneset_parsed()[0])
+        if not n:
+            return None
+        return ui.div(
+            ui.input_action_button("back_to_set", COPY["back_to_set"].format(name=active_name.get() or "unsaved set")),
+            ui.p(COPY["back_to_set_help"].format(n=n), class_="help-copy"))
+
+    @reactive.effect
+    @reactive.event(input.back_to_set)
+    def back_to_set():
+        if not geneset_parsed()[0]:
+            return
+        ui.update_radio_buttons("sel_kind", selected="set")
+        ui.update_radio_buttons("details_kind", selected="set")
+        ui.update_radio_buttons("fate_target", selected="active")
+        ui.update_select("colour_by", selected="selection")
+
     @render.ui
     def selection_summary():
         row = gene_row()

@@ -7,6 +7,8 @@
   "set_help": "Paste gene IDs (Format: MtrunA17_ChrXgXXXXXXX) or gene names, separated by spaces, commas or new lines.",
   "set_storage": "Sets are saved locally. Save with the same name to replace an existing custom set.",
   "inspection_help": "Switch from the active gene set to this gene.",
+  "back_to_set": "Back to set: {name}",
+  "back_to_set_help": "Return to the gene set ({n:,} genes) and keep this gene as the inspected gene.",
   "cells_help": "Expression: Log1p(CP10K). Grey cells no detected expression.",
   "genes_help": "Precomputed gene expression modules. Black markers highlight known nodulation genes. Yellow ring(s) marks selected gene(s). Sample filters do not affected this map.",
   "dot_help": "Dot size: Number of cells expressing gene (%). Colour: mean log1p(CP10K) over all cells in each group. Groups with < 20 cells are omitted.",
